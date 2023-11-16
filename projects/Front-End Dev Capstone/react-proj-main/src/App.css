@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&family=Karla:wght@400;700&display=swap');
 .App {
   text-align: center;
 }
@@ -35,4 +36,334 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  margin: 0;
+  padding: 0 50px; /* This will add some space around your page content */
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0; /* This will add some space at the top and bottom of your navbar */
+  background-color: #fff;
+  display: flex;
+  justify-content: center; /* This will distribute the space around the items */
+  align-items: center;
+}
+
+.navbar li {
+  padding: 14px 16px;
+}
+
+.navbar li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold; /* This will make your text bold */
+}
+
+.navbar li a:hover {
+  color: #007BFF; /* This is a commonly used color for UI design, but feel free to change it */
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-section {
+  background-color: #495E57;
+  display: flex;
+  justify-content: center; /* This will center the items in the container */
+  color: #FFFFFF;
+  padding: 20px;
+  height: 300px;
+  overflow: visible; /* This will allow the image to extend outside the green background */
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%; /* This will limit the width of the text section to a quarter of the page */
+  margin-right: 20px; /* This will add some space to the right of the text section */
+}
+
+.title {
+  font-family: 'Markazi Text';
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #F4CE14;
+  margin-top: 15px;
+}
+
+.subtitle {
+  font-family: 'Markazi Text';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.lead-text {
+  font-family: Karla;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal; /* Replace 'Lead text' with the actual font name */
+  max-width: 60%; /* This will limit the width of the paragraph */
+  margin-top: 30px;
+}
+
+.reserve-button {
+  background-color: #F4CE14;
+  color: #040404;
+  width: 165px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px; /* This will give the button rounded edges */
+  margin-top: 50px; /* This will add more space between the p and the button */
+  transition: background-color 0.3s ease, color 0.3s ease; /* This will animate the color changes */
+}
+
+.reserve-button:hover {
+  background-color: #C1A600; /* This is a darker shade of yellow */
+  color: #5e5d5d; /* This will change the text color to white */
+}
+
+.header-image {
+  width: 375px; /* Adjust as needed */
+  height: 430px;
+  transform: translateY(10px); /* This will shift the image down */
+}
+
+.title, .subtitle, .lead-text {
+  margin-bottom: -20px; /* This will reduce the space between the h1, h2, and p */
+}
+
+
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: calc(100% - 100px); /* Adjust the max-width to account for the padding */
+  margin: 0 auto; /* This will center the main section */
+  padding: 150px 360px; /* Same horizontal padding as the body */
+}
+
+.online-menu-button {
+  background-color: #F4CE14;
+  color: #040404;
+  width: 20%; /* Use percentages for responsive width */
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px; /* This will give the button rounded edges */
+  align-self: flex-end;
+  margin-bottom: 50px;
+  margin-top: -75px;
+}
+
+.online-menu-button:hover {
+  background-color: #C1A600; /* This is a darker shade of yellow */
+  color: #5e5d5d; /* This will change the text color to white */
+}
+
+.dish-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF; /* Change to white to match the page background */
+  width: 100%; /* Make the dish container take up the full width of the main section */
+  gap: 20px; /* This will create some space between the cards */
+}
+
+.dish-card {
+  position: relative; /* Add this line */
+  width: 30%; /* Use percentages for responsive width */
+  height: 439px;
+  background-color: #EDEFEE;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.dish-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 10px; /* Adjust this value as needed */
+}
+ 
+.dish-card img {
+  width: 100%; /* Use percentages for responsive width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* This will make the image cover the entire width of the card */
+  margin-top: -10px;
+}
+
+.bru {
+  border-top-left-radius: 10px; /* This will make the top left corner rounded */
+  border-top-right-radius: 10px; /* This will make the top right corner rounded */
+  border: 0.5px solid #000; /* This will add a 1px black border */
+  border-bottom: none; /* This will remove the border from the bottom edge */
+}
+
+.dish-card h4 {
+  font-family: 'Markazi Text';
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 70px;
+  white-space: nowrap;
+}
+
+.dish-card .price {
+  color: #EE9972;
+  font-family: Karla;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 1px;
+  margin-left: -4px;
+}
+
+.dish-card p {
+  width: 80%; /* Use percentages for responsive width */
+  text-align: left; /* Align text to the left */
+  margin-left: 20px;
+}
+
+.dish-card .order {
+  margin-top: 17px;
+}
+
+.dish-card .icon {
+  width: 20px; /* Adjust this value as needed */
+  height: 20px; /* Adjust this value as needed */
+  object-fit: contain; /* Add this line */
+  margin-top: 5px;
+  margin-right: 40px;
+}
+
+@media (min-width: 400px) {
+  main {
+    width: 800px;
+    padding: 150px 50px; /* Reduce the horizontal padding */
+  }
+
+  .dish-card {
+    width: 50%; /* Make the dish cards take up the full width of the dish container */
+  }
+}
+
+/* For viewports 2500px and above */
+@media (min-width: 1400px) {
+  main {
+    width: 1000px; /* Limit the max-width of the main section */
+    padding: 150px 250px; /* Increase the horizontal padding */
+  }
+
+  .dish-card {
+    width: 50%; /* Use percentages for responsive width */
+  }
+}
+
+.dish-card-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Make the container take up the full width of the card */
+  margin-bottom: -30px;
+}
+
+.third-card-header .price {
+  margin-left: -15px; /* Adjust this value as needed */
+}
+
+.second-card-header .price {
+  margin-left: 25px; /* Adjust this value as needed */
+}
+
+.order-container {
+  position: absolute; /* Add this line */
+  bottom: 20px; /* Add this line */
+  display: flex;
+  align-items: center; /* Align the text and the icon vertically */
+  justify-content: space-between;
+  width: 80%; /* Add this line to prevent the container from stretching to the full width of the .dish-card */
+  font-family: Karla;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+}
+
+
+
+/* Footer section */
+
+footer {
+  background-color: #f2f2f2;
+
+}
+
+.footer_container{
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  align-content: stretch;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 250px; 
+  padding-right: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  max-width: 1200px;
+}
+
+footer section {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 20px;
+  
+}
+
+footer section:last-child {
+  margin-right: 0;
+}
+
+footer h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: #333;
+}
+
+footer p {
+  color: #666;
+  margin-bottom: 10px;
 }

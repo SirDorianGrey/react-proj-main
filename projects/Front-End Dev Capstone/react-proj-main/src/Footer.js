@@ -1,8 +1,10 @@
 import React from 'react';
 
+
 function Footer() {
   return (
     <footer>
+      <div class= 'footer_container'>
       <section>
         <h3>Navigation</h3>
         <nav>
@@ -31,6 +33,7 @@ function Footer() {
           <li><a href="https://www.twitter.com/example">Twitter</a></li>
         </ul>
       </section>
+      </div>
     </footer>
   );
 }
