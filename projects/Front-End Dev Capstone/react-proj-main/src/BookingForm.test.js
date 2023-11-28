@@ -48,4 +48,24 @@ test('Renders the "Choose date" label in the BookingForm component', () => {
   expect(labelElement).toBeInTheDocument();
 });
 
+test('Date input has correct attributes', () => {
+  render(<BookingForm date="" guests="" occasion="" availableTimes={[]} dispatch={() => {}} time="" setTime={() => {}} />);
+  const dateInput = screen.getByLabelText('Choose date');
+  expect(dateInput).toHaveAttribute('type', 'date');
+  expect(dateInput).toHaveAttribute('min');
+});
 
+test('Submit button is disabled when form is invalid', () => {
+  render(<BookingForm date="" guests="" occasion="" availableTimes={[]} dispatch={() => {}} time="" setTime={() => {}} />);
+  const submitButton = screen.getByRole('button', { name: /Make Your reservation/i });
+  expect(submitButton).toBeDisabled();
+});
+
+test('Submit button is enabled when form is valid', () => {
+  fetchAPI.mockResolvedValue(['10:00', '11:00', '12:00']); // Mock the return value of fetchAPI
+
+  render(<BookingForm date="2022-12-31" guests={{ value: '1', label: '1' }} occasion="Dinner" availableTimes={[{ value: '10:00', label: '10:00' }]} dispatch={() => {}} time={{ value: '10:00', label: '10:00' }} setTime={() => {}} fetchAPI={fetchAPI} setAvailableTimes={jest.fn()} />);
+  
+  const submitButton = screen.getByRole('button', { name: /Make Your reservation/i });
+  expect(submitButton).toBeEnabled();
+});
