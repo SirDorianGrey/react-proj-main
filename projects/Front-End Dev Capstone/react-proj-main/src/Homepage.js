@@ -3,13 +3,17 @@ import salad from './Greek Salad.png'
 import Bruschetta from './Bruchetta.png'
 import cake from './Lemon Dessert.png'
 import icon from './Delivery Icon.svg'
-import Header from './Header';
+import { Link } from 'react-router-dom';
 
 function Homepage() {
   return (
 <main>
   <h1>This weeks specials</h1>
-  <button type="button" class="online-menu-button">Online Menu</button>
+  
+  <button type="button" class="online-menu-button"> 
+    <Link to="/services">Online Menu</Link>
+  </button>
+  
 
   <div class="dish-container">
     <div class="dish-card">
