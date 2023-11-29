@@ -6,6 +6,8 @@ import AboutPage from './AboutPage';
 import BookingPage from './BookingPage';
 import { fetchAPI, submitAPI } from './mockAPI';
 import ConfirmedBooking from './ConfirmedBooking';
+import Login from './Login'; 
+import Menu from './Menu';
 
 function Main() {
   const [availableTimes, setAvailableTimes] = useState([]);
@@ -35,6 +37,8 @@ function Main() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/reservations" element={<BookingPage availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} submitForm={submitForm}/>} />
       <Route path="/confirmed" element={<ConfirmedBooking />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/menu" element={<Menu />} />
     </Routes>
   );
 }

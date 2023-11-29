@@ -11,7 +11,7 @@ function Homepage() {
   <h1>This weeks specials</h1>
   
   <button type="button" class="online-menu-button"> 
-    <Link to="/services">Online Menu</Link>
+    <Link to="/menu">Online Menu</Link>
   </button>
   
 
